@@ -4,262 +4,505 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>林瑞明｜上天里里長</title>
-  <meta name="description" content="現任上天里里長林瑞明，二十年一步一腳印，11月28日懇請鄉親繼續支持。">
+  <meta name="description" content="現任上天里里長林瑞明，二十年一步一腳印，務實誠懇為鄉親服務。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="林瑞明｜上天里里長">
+  <meta property="og:description" content="二十年一步一腳印，務實誠懇為鄉親服務。">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231F5E3B'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='700' text-anchor='middle' fill='white' font-family='sans-serif'%3E瑞%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@400;500;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    // 單一強調色（深綠），其餘皆為帶綠調的中性色。顏色以 CSS 變數定義，自動切換淺色/深色。
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#1E3A8A',
-            'primary-bright': '#1E40AF',
-            secondary: '#0369A1',
-            accent: '#0284C7',
-            'accent-soft': '#E0F2FE',
-            background: '#EFF6FF',
-            foreground: '#0F172A',
-            muted: '#E9EFF5',
-            border: '#BFDBFE',
+            page: 'rgb(var(--c-page) / <alpha-value>)',
+            surface: 'rgb(var(--c-surface) / <alpha-value>)',
+            ink: 'rgb(var(--c-ink) / <alpha-value>)',
+            soft: 'rgb(var(--c-soft) / <alpha-value>)',
+            line: 'rgb(var(--c-line) / <alpha-value>)',
+            accent: 'rgb(var(--c-accent) / <alpha-value>)',
+            deep: 'rgb(var(--c-deep) / <alpha-value>)',
+            tint: 'rgb(var(--c-tint) / <alpha-value>)',
+            band: 'rgb(var(--c-band) / <alpha-value>)',
+            onband: 'rgb(var(--c-onband) / <alpha-value>)',
+            onaccent: 'rgb(var(--c-onaccent) / <alpha-value>)',
           },
           fontFamily: {
-            serif: ['"Noto Serif TC"', 'serif'],
-            sans: ['"Noto Sans TC"', 'sans-serif'],
+            sans: ['"Chiron GoRound TC"', '"Noto Sans TC"', '"Microsoft JhengHei"', 'sans-serif'],
+            slogan: ['"LXGW WenKai TC"', 'DFKai-SB', 'BiauKai', 'serif'],
           },
         },
       },
     };
   </script>
   <style>
-    html { scroll-behavior: smooth; }
-    body { background: #EFF6FF; }
-    /* 深藍斜紋底，只用於主色色塊 */
-    .spring-paper {
-      background-color: #1E40AF;
-      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 2px, transparent 2px 14px);
+    :root {
+      --c-page: 245 245 242;
+      --c-surface: 255 255 255;
+      --c-ink: 27 31 28;
+      --c-soft: 75 82 77;
+      --c-line: 218 220 214;
+      --c-accent: 31 94 59;
+      --c-deep: 22 74 45;
+      --c-tint: 230 238 232;
+      --c-band: 22 74 45;
+      --c-onband: 245 247 244;
+      --c-onaccent: 255 255 255;
+      color-scheme: light dark;
     }
-    .seal { writing-mode: vertical-rl; letter-spacing: .15em; }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --c-page: 20 24 21;
+        --c-surface: 29 35 31;
+        --c-ink: 236 238 234;
+        --c-soft: 178 186 180;
+        --c-line: 52 60 55;
+        --c-accent: 124 196 150;
+        --c-deep: 150 212 174;
+        --c-tint: 31 44 36;
+        --c-band: 30 50 39;
+        --c-onband: 236 238 234;
+        --c-onaccent: 14 28 19;
+      }
+    }
+    html { scroll-behavior: smooth; }
+    body { background-color: rgb(var(--c-page)); }
+    h1, h2, h3 { text-wrap: balance; }
+    p { text-wrap: pretty; }
+    ::selection { background: rgb(var(--c-accent) / .25); }
+    .navlink[aria-current="true"] { color: rgb(var(--c-accent)); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
     }
   </style>
 </head>
-<body class="font-sans text-foreground text-base leading-relaxed antialiased">
+<body class="font-sans bg-page text-ink text-base leading-relaxed antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-accent focus:text-onaccent focus:font-bold">跳到主要內容</a>
 
   <!-- 頂部導覽 -->
-  <header class="sticky top-0 z-40 bg-background/95 border-b-4 border-primary-bright">
-    <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between" aria-label="主選單">
-      <a href="#top" class="font-serif font-black text-xl text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">林瑞明</a>
-      <ul class="hidden md:flex gap-8 font-medium">
-        <li><a href="#record" class="hover:text-primary transition-colors duration-200 cursor-pointer">二十年成績</a></li>
-        <li><a href="#safety" class="hover:text-primary transition-colors duration-200 cursor-pointer">防災專業</a></li>
-        <li><a href="#belief" class="hover:text-primary transition-colors duration-200 cursor-pointer">服務理念</a></li>
-        <li><a href="#contact" class="hover:text-primary transition-colors duration-200 cursor-pointer">聯絡瑞明</a></li>
+  <header class="sticky top-0 z-40 bg-page/90 backdrop-blur border-b border-line">
+    <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-6" aria-label="主選單">
+      <a href="#top" class="font-black text-xl tracking-tight rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">林瑞明</a>
+      <ul class="hidden lg:flex gap-8 font-medium">
+        <li><a class="navlink hover:text-accent transition-colors duration-200" href="#record">二十年成績</a></li>
+        <li><a class="navlink hover:text-accent transition-colors duration-200" href="#gallery">現場紀錄</a></li>
+        <li><a class="navlink hover:text-accent transition-colors duration-200" href="#safety">防災專業</a></li>
+        <li><a class="navlink hover:text-accent transition-colors duration-200" href="#belief">服務理念</a></li>
+        <li><a class="navlink hover:text-accent transition-colors duration-200" href="#contact">聯絡瑞明</a></li>
       </ul>
-      <a href="tel:0931343826" class="inline-flex items-center gap-2 min-h-11 px-4 rounded-full bg-primary text-white font-bold hover:bg-secondary transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span>服務專線</span>
-      </a>
+      <a href="tel:0931343826" class="inline-flex items-center min-h-11 px-5 rounded-lg bg-accent text-onaccent font-bold whitespace-nowrap hover:bg-deep active:translate-y-px transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-page focus-visible:ring-accent">撥打服務專線</a>
     </nav>
   </header>
 
-  <main id="top">
-    <!-- 主視覺 -->
-    <section class="relative overflow-hidden spring-paper text-white">
-      <div class="max-w-6xl mx-auto px-4 pt-12 pb-40 md:pt-20 md:pb-52 grid md:grid-cols-5 gap-10 items-center">
-        <div class="md:col-span-3 reveal">
-          <p class="inline-block bg-accent-soft text-secondary font-bold px-4 py-1 rounded-full mb-5">現任上天里里長・新北市特優里長</p>
-          <h1 class="font-serif font-black text-6xl md:text-8xl tracking-wider mb-6">林瑞明</h1>
-          <p class="font-serif font-bold text-2xl md:text-4xl leading-snug mb-6">
-            二十年如一日<br>
-            厝邊的代誌，就是瑞明的代誌
-          </p>
-          <p class="text-lg md:text-xl text-white/90 mb-8 max-w-xl">
-            11 月 28 日里長選舉，懇請上天里的鄉親序大，<br class="hidden md:inline">繼續牽成瑞明，讓我為大家再打拚！
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="#record" class="inline-flex items-center min-h-12 px-6 rounded-full bg-white text-primary font-bold text-lg hover:bg-accent-soft transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-bright focus-visible:ring-white">看瑞明做了什麼</a>
-            <a href="tel:0931343826" class="inline-flex items-center min-h-12 px-6 rounded-full border-2 border-white text-white font-bold text-lg hover:bg-white/10 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">0931-343-826</a>
-          </div>
-        </div>
+  <main id="main">
+    <span id="top"></span>
 
-        <!-- 照片：放 photo.jpg 於同資料夾即顯示；沒有檔案時改顯示姓名印章 -->
-        <div class="md:col-span-2 flex justify-center reveal">
-          <div class="relative w-64 md:w-80 aspect-[4/5] rounded-3xl border-8 border-white bg-secondary overflow-hidden">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <span class="seal font-serif font-black text-6xl md:text-7xl text-white border-4 border-white rounded-xl px-3 py-4">林瑞明</span>
-            </div>
-            <img src="photo.jpg" alt="上天里里長林瑞明" class="relative w-full h-full object-cover" onerror="this.remove()">
-          </div>
+    <!-- 主視覺 -->
+    <section class="max-w-6xl mx-auto px-4 pt-10 pb-16 md:pt-14 md:pb-24 grid md:grid-cols-12 gap-10 md:gap-8 items-center">
+      <div class="md:col-span-7">
+        <p class="hero-in text-soft font-medium mb-4">新北市瑞芳區　上天里里長</p>
+        <h1 class="hero-in text-6xl md:text-7xl font-black tracking-tight leading-none mb-6">林瑞明</h1>
+        <p class="hero-in font-slogan font-bold text-2xl md:text-3xl text-accent leading-snug max-w-md mb-9">二十年如一日，<br>厝邊的代誌，就是瑞明的代誌。</p>
+        <div class="hero-in flex flex-wrap items-center gap-x-8 gap-y-4">
+          <a href="tel:0931343826" class="inline-flex items-center min-h-12 px-7 rounded-lg bg-accent text-onaccent font-bold text-lg whitespace-nowrap hover:bg-deep active:translate-y-px transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-page focus-visible:ring-accent">撥打服務專線</a>
+          <a href="#record" class="font-bold text-accent underline decoration-2 underline-offset-8 hover:text-deep transition-colors duration-200 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">看做過的事</a>
         </div>
       </div>
 
-      <!-- 山城與海的剪影 -->
-      <svg class="absolute bottom-0 left-0 w-full h-32 md:h-44" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
-        <path fill="#172554" d="M0 140 L180 60 L300 110 L460 30 L620 120 L760 70 L900 130 L1080 50 L1240 115 L1440 80 L1440 200 L0 200 Z"/>
-        <path fill="#EFF6FF" d="M0 170 Q180 150 360 170 T720 170 T1080 170 T1440 170 L1440 200 L0 200 Z"/>
-      </svg>
+      <!-- 大頭照：白底照片以 multiply 融入淺綠色底，沒有檔案時改顯示姓名 -->
+      <div class="hero-in md:col-span-5">
+        <div class="relative aspect-[3/4] max-w-sm mx-auto md:max-w-none rounded-lg overflow-hidden" style="background:#DCE8DF">
+          <div class="hidden absolute inset-0 items-center justify-center">
+            <span class="font-black text-6xl text-[#1F5E3B]/60" style="writing-mode:vertical-rl;letter-spacing:.2em">林瑞明</span>
+          </div>
+          <img src="images/portrait.jpg" alt="上天里里長林瑞明" width="900" height="1237" fetchpriority="high"
+               class="relative w-full h-full object-cover object-top mix-blend-multiply"
+               onerror="this.previousElementSibling.classList.replace('hidden','flex');this.remove()">
+        </div>
+      </div>
     </section>
 
     <!-- 感謝的話 -->
-    <section class="max-w-3xl mx-auto px-4 py-16 md:py-24 text-center reveal">
-      <h2 class="font-serif font-black text-3xl md:text-4xl text-primary mb-6">多謝上天里的鄉親</h2>
-      <p class="text-lg md:text-xl">
-        二十年前，鄉親把這份責任交給瑞明；<br class="hidden md:inline">二十年來，瑞明不敢有一天放鬆。<br class="hidden md:inline">不講華麗的話，用務實誠懇的態度做實在的事——<br class="hidden md:inline">路要走得安心、厝要住得安穩、水要用得放心，<br class="hidden md:inline">這是瑞明對每一戶人家的承諾。
-      </p>
+    <section class="max-w-6xl mx-auto px-4 pb-16 md:pb-24">
+      <div class="reveal max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">多謝上天里的鄉親</h2>
+        <p class="text-lg md:text-xl leading-loose text-soft">
+          二十年前，鄉親把這份責任交給瑞明。二十年來，瑞明不敢有一天放鬆。不講華麗的話，用務實誠懇的態度做實在的事。路要走得安心，厝要住得安穩，水要用得放心，這是瑞明對每一戶人家的承諾。
+        </p>
+      </div>
     </section>
 
     <!-- 政績 -->
-    <section id="record" class="bg-muted py-16 md:py-24 scroll-mt-16">
+    <section id="record" class="max-w-6xl mx-auto px-4 pb-16 md:pb-24 scroll-mt-20">
+      <h2 class="reveal text-3xl md:text-4xl font-black tracking-tight mb-10">二十年，做給鄉親看</h2>
+
+      <div class="grid lg:grid-cols-12 gap-5 lg:items-stretch">
+        <article class="reveal lg:col-span-7">
+          <img src="images/bridge-1.jpg" alt="瑞芳橋改建完工後的紅色鋼橋" width="1600" height="900" loading="lazy" decoding="async" class="w-full aspect-[16/9] lg:aspect-auto lg:h-72 object-cover rounded-lg mb-5">
+          <h3 class="text-xl md:text-2xl font-bold mb-2">基礎建設與橋樑改建</h3>
+          <p class="text-soft max-w-xl">從基礎建設到橋樑改建，一項一項扎實做好。不求一時風光，只求鄉親每天出入平安，生活都比昨天更好一點。</p>
+        </article>
+
+        <article class="reveal lg:col-span-5">
+          <img src="images/disaster-1.jpg" alt="豪雨中山區道路旁排水口湧出泥水" width="1600" height="900" loading="lazy" decoding="async" class="w-full aspect-[16/9] lg:aspect-auto lg:h-72 object-cover rounded-lg mb-5">
+          <h3 class="text-xl md:text-2xl font-bold mb-2">解決淹水路段</h3>
+          <p class="text-soft">以前一落大雨就心驚驚的路段，瑞明一處一處追到底。現在雨再大，回家的路也不再讓人煩惱。</p>
+        </article>
+
+        <article class="reveal lg:col-span-5 bg-surface rounded-lg p-7">
+          <h3 class="text-xl font-bold mb-2">增建河濱步道</h3>
+          <p class="text-soft">沿著溪邊為鄉親開出一條好走的路。早上散步、傍晚運動，大人囡仔攏有一個安心的好所在。</p>
+        </article>
+
+        <article class="reveal lg:col-span-4 bg-tint rounded-lg p-7">
+          <h3 class="text-xl font-bold mb-2">房屋耐震補強</h3>
+          <p class="text-soft">陪著鄉親一起把老厝顧好、補強。地牛翻身的時候，一家大小才能安心、免驚惶。</p>
+        </article>
+
+        <article class="reveal lg:col-span-3 bg-surface rounded-lg p-7">
+          <h3 class="text-xl font-bold mb-2">協助自來水申請</h3>
+          <p class="text-soft">乾淨的水是生活最基本的保障。瑞明陪鄉親跑流程、辦申請，讓每一戶打開水龍頭都用得放心。</p>
+        </article>
+
+        <article class="reveal lg:col-span-12 bg-band text-onband rounded-lg p-8 md:p-10">
+          <h3 class="text-2xl md:text-3xl font-black tracking-tight mb-3">特優里長，環境五星</h3>
+          <p class="max-w-2xl text-onband/85 text-lg">民國 103 年、114 年兩度榮獲新北市特優里長，並取得新北市里環境認證 5 星級。這份肯定，屬於每一位一起打拚的鄉親。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 現場紀錄：照片輪播 -->
+    <section id="gallery" class="bg-tint py-16 md:py-24 scroll-mt-16" aria-labelledby="gallery-title">
       <div class="max-w-6xl mx-auto px-4">
-        <div class="text-center mb-12 reveal">
-          <p class="text-secondary font-bold tracking-widest mb-2">一步一腳印</p>
-          <h2 class="font-serif font-black text-3xl md:text-4xl">二十年，做給鄉親看</h2>
+        <p class="reveal text-soft font-medium tracking-widest mb-3">現場紀錄</p>
+        <h2 id="gallery-title" class="reveal text-3xl md:text-4xl font-black tracking-tight mb-8">做過的事，照片為證</h2>
+
+        <div id="gallery-tabs" role="tablist" aria-label="政績類別" class="flex flex-wrap gap-3 mb-6"></div>
+
+        <div id="carousel" role="region" aria-roledescription="輪播" aria-label="政績照片輪播" tabindex="0"
+             class="relative rounded-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-offset-4 focus-visible:ring-offset-tint focus-visible:ring-accent">
+          <div id="slides" class="relative aspect-[4/3] sm:aspect-video overflow-hidden rounded-lg bg-surface touch-pan-y"></div>
+
+          <button id="prev" type="button" aria-label="上一張" class="absolute left-3 top-1/2 -translate-y-1/2 w-12 h-12 rounded-lg bg-surface/90 text-ink text-2xl leading-none flex items-center justify-center hover:bg-surface active:scale-95 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">←</button>
+          <button id="next" type="button" aria-label="下一張" class="absolute right-3 top-1/2 -translate-y-1/2 w-12 h-12 rounded-lg bg-surface/90 text-ink text-2xl leading-none flex items-center justify-center hover:bg-surface active:scale-95 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">→</button>
         </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article class="bg-white rounded-2xl p-7 border-2 border-border reveal">
-            <div class="w-12 h-12 rounded-xl bg-primary-bright text-white flex items-center justify-center mb-4">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20"/><path d="M5 20V9l7-5 7 5v11"/><path d="M9 20v-6h6v6"/></svg>
-            </div>
-            <h3 class="font-serif font-bold text-xl mb-2">基礎建設・橋樑改建</h3>
-            <p>從基礎建設到橋樑改建，一項一項扎實做好。不求一時風光，只求鄉親每天出入平安，生活都比昨天更好一點。</p>
-          </article>
-          <article class="bg-white rounded-2xl p-7 border-2 border-border reveal">
-            <div class="w-12 h-12 rounded-xl bg-primary-bright text-white flex items-center justify-center mb-4">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19c4-2 6-8 16-14"/><path d="M4 15c2-1 3-3 5-4"/><circle cx="17" cy="17" r="3"/></svg>
-            </div>
-            <h3 class="font-serif font-bold text-xl mb-2">增建河濱步道</h3>
-            <p>沿著溪邊為鄉親開出一條好走的路。早上散步、傍晚運動，大人囡仔攏有一個安心的好所在。</p>
-          </article>
-          <article class="bg-white rounded-2xl p-7 border-2 border-border reveal">
-            <div class="w-12 h-12 rounded-xl bg-primary-bright text-white flex items-center justify-center mb-4">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-            </div>
-            <h3 class="font-serif font-bold text-xl mb-2">房屋耐震補強</h3>
-            <p>陪著鄉親一起把老厝顧好、補強。地牛翻身的時候，一家大小才能安心、免驚惶。</p>
-          </article>
-          <article class="bg-white rounded-2xl p-7 border-2 border-border reveal">
-            <div class="w-12 h-12 rounded-xl bg-primary-bright text-white flex items-center justify-center mb-4">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 4 14.9"/><path d="M8 19v2"/><path d="M12 17v4"/><path d="M16 19v2"/></svg>
-            </div>
-            <h3 class="font-serif font-bold text-xl mb-2">解決淹水路段</h3>
-            <p>以前一落大雨就心驚驚的路段，瑞明一處一處追到底。現在雨再大，回家的路也不再讓人煩惱。</p>
-          </article>
-          <article class="bg-white rounded-2xl p-7 border-2 border-border reveal">
-            <div class="w-12 h-12 rounded-xl bg-primary-bright text-white flex items-center justify-center mb-4">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.7c3 3.6 6 7 6 11.3a6 6 0 0 1-12 0c0-4.3 3-7.7 6-11.3z"/></svg>
-            </div>
-            <h3 class="font-serif font-bold text-xl mb-2">協助自來水申請</h3>
-            <p>乾淨的水是生活最基本的保障。瑞明陪鄉親跑流程、辦申請，讓每一戶打開水龍頭都用得放心。</p>
-          </article>
-          <article class="rounded-2xl p-7 bg-accent-soft reveal">
-            <div class="w-12 h-12 rounded-xl bg-secondary text-white flex items-center justify-center mb-4">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>
-            </div>
-            <h3 class="font-serif font-bold text-xl mb-2 text-secondary">特優里長・環境五星</h3>
-            <p class="text-foreground">民國 103 年、114 年兩度榮獲新北市特優里長，並取得新北市里環境認證 5 星級。這份肯定，屬於每一位支持瑞明的鄉親。</p>
-          </article>
+
+        <div class="mt-5 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+          <p id="slide-caption" class="font-bold text-lg md:text-xl"></p>
+          <div class="flex items-center gap-4">
+            <div id="dots" class="flex" role="group" aria-label="選擇照片"></div>
+            <button id="toggle-play" type="button" aria-pressed="false" class="min-h-11 px-4 rounded-lg border-2 border-line font-bold text-ink hover:border-accent hover:text-accent transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"><span id="play-label">暫停</span></button>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- 防災專業 -->
     <section id="safety" class="max-w-6xl mx-auto px-4 py-16 md:py-24 scroll-mt-16">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div class="reveal">
-          <p class="text-secondary font-bold tracking-widest mb-2">山城人的安全，瑞明來守護</p>
-          <h2 class="font-serif font-black text-3xl md:text-4xl mb-6">災害還沒來，<br>瑞明已經準備好</h2>
-          <p class="text-lg">住在山邊、靠著溪水，颱風豪雨是大家心頭的煩惱。瑞明不只用心，更用專業——親身投入防災訓練，把整個里打造成讓鄉親安心的防災社區。</p>
+      <div class="grid md:grid-cols-12 gap-10 md:gap-12 items-start">
+        <div class="reveal md:col-span-5">
+          <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-5">災害還沒來，<br>瑞明已經準備好</h2>
+          <p class="text-lg text-soft">住在山邊、靠著溪水，颱風豪雨是大家心頭的煩惱。瑞明不只用心，更用專業，親身投入防災訓練，把整個里打造成讓鄉親安心的防災社區。</p>
         </div>
-        <ul class="space-y-4 reveal">
-          <li class="flex gap-4 items-start bg-white border-l-8 border-primary-bright rounded-xl p-5">
-            <span class="font-serif font-black text-2xl text-primary shrink-0">壹</span>
-            <div><p class="font-bold text-lg">內政部一星防災社區</p><p class="text-slate-600">獲內政部認證為一星防災社區，是中央對全里的肯定。</p></div>
+        <ul class="reveal md:col-span-7 divide-y divide-line border-y border-line">
+          <li class="py-6">
+            <p class="font-bold text-xl mb-1">內政部一星防災社區</p>
+            <p class="text-soft">獲內政部認證為一星防災社區，是中央對全里的肯定。</p>
           </li>
-          <li class="flex gap-4 items-start bg-white border-l-8 border-primary-bright rounded-xl p-5">
-            <span class="font-serif font-black text-2xl text-primary shrink-0">貳</span>
-            <div><p class="font-bold text-lg">水保署土石流防災專員</p><p class="text-slate-600">山坡地的風險，瑞明比誰都清楚、比誰都早一步。</p></div>
+          <li class="py-6">
+            <p class="font-bold text-xl mb-1">水保署土石流防災專員</p>
+            <p class="text-soft">山坡地的風險，瑞明比誰都清楚、比誰都早一步。</p>
           </li>
-          <li class="flex gap-4 items-start bg-white border-l-8 border-primary-bright rounded-xl p-5">
-            <span class="font-serif font-black text-2xl text-primary shrink-0">參</span>
-            <div><p class="font-bold text-lg">新北市消防局防災士</p><p class="text-slate-600">緊急時刻第一個站出來，是鄉親最近的依靠。</p></div>
+          <li class="py-6">
+            <p class="font-bold text-xl mb-1">新北市消防局防災士</p>
+            <p class="text-soft">緊急時刻第一個站出來，是鄉親最近的依靠。</p>
           </li>
         </ul>
       </div>
     </section>
 
     <!-- 服務理念 -->
-    <section id="belief" class="spring-paper text-white py-16 md:py-24 scroll-mt-16">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="font-serif font-black text-3xl md:text-4xl text-center mb-12 reveal">瑞明的三個堅持</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="border-2 border-white/60 rounded-2xl p-7 text-center reveal">
-            <p class="font-serif font-black text-4xl text-accent-soft mb-3">一家人</p>
-            <p class="text-lg">上天里的鄉親，都是自己人。你家的事就是我家的事，有困難，喊一聲，瑞明就到。</p>
-          </div>
-          <div class="border-2 border-white/60 rounded-2xl p-7 text-center reveal">
-            <p class="font-serif font-black text-4xl text-accent-soft mb-3">顧弱勢</p>
-            <p class="text-lg">把最需要幫忙的人放在第一位。獨居長輩、困難家庭，瑞明一個都不會漏掉。</p>
-          </div>
-          <div class="border-2 border-white/60 rounded-2xl p-7 text-center reveal">
-            <p class="font-serif font-black text-4xl text-accent-soft mb-3">做實在</p>
-            <p class="text-lg">不開空頭支票，用務實誠懇的態度，一件一件把事情做好，做給鄉親看。</p>
-          </div>
+    <section id="belief" class="max-w-6xl mx-auto px-4 pb-16 md:pb-24 scroll-mt-16">
+      <h2 class="reveal text-3xl md:text-4xl font-black tracking-tight mb-10">瑞明的三個堅持</h2>
+      <div class="border-t-2 border-ink">
+        <div class="reveal grid md:grid-cols-12 gap-3 md:gap-8 py-8 border-b border-line">
+          <p class="md:col-span-4 text-4xl md:text-5xl font-black tracking-tight text-accent">一家人</p>
+          <p class="md:col-span-8 text-lg md:text-xl text-soft self-center">上天里的鄉親，都是自己人。你家的事就是我家的事，有困難，喊一聲，瑞明就到。</p>
+        </div>
+        <div class="reveal grid md:grid-cols-12 gap-3 md:gap-8 py-8 border-b border-line">
+          <p class="md:col-span-4 text-4xl md:text-5xl font-black tracking-tight text-accent">顧弱勢</p>
+          <p class="md:col-span-8 text-lg md:text-xl text-soft self-center">把最需要幫忙的人放在第一位。獨居長輩、困難家庭，瑞明一個都不會漏掉。</p>
+        </div>
+        <div class="reveal grid md:grid-cols-12 gap-3 md:gap-8 py-8 border-b border-line">
+          <p class="md:col-span-4 text-4xl md:text-5xl font-black tracking-tight text-accent">做實在</p>
+          <p class="md:col-span-8 text-lg md:text-xl text-soft self-center">不開空頭支票，用務實誠懇的態度，一件一件把事情做好，做給鄉親看。</p>
         </div>
       </div>
     </section>
 
     <!-- 在地出身 -->
-    <section class="max-w-3xl mx-auto px-4 py-16 md:py-20 text-center reveal">
-      <p class="text-secondary font-bold tracking-widest mb-2">在瑞芳讀冊大漢</p>
-      <h2 class="font-serif font-black text-3xl md:text-4xl mb-8">土生土長，最懂這片土地</h2>
-      <ol class="flex flex-wrap justify-center gap-3 text-lg">
-        <li class="px-5 py-2 rounded-full bg-white border-2 border-border">吉慶國小</li>
-        <li class="px-5 py-2 rounded-full bg-white border-2 border-border">瑞芳國中</li>
-        <li class="px-5 py-2 rounded-full bg-white border-2 border-border">瑞芳高工</li>
-        <li class="px-5 py-2 rounded-full bg-white border-2 border-border">黎明工專畢業</li>
-      </ol>
+    <section class="max-w-6xl mx-auto px-4 pb-16 md:pb-24">
+      <div class="reveal">
+        <p class="text-soft font-medium tracking-widest mb-3">在瑞芳讀冊大漢</p>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-8">土生土長，最懂這片土地</h2>
+        <ol class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6">
+          <li class="border-t-2 border-accent pt-3 text-lg font-bold">吉慶國小</li>
+          <li class="border-t-2 border-accent pt-3 text-lg font-bold">瑞芳國中</li>
+          <li class="border-t-2 border-accent pt-3 text-lg font-bold">瑞芳高工</li>
+          <li class="border-t-2 border-accent pt-3 text-lg font-bold">黎明工專畢業</li>
+        </ol>
+      </div>
     </section>
 
-    <!-- 號召 -->
-    <section id="contact" class="bg-foreground text-white py-16 md:py-24 scroll-mt-16">
-      <div class="max-w-4xl mx-auto px-4 text-center reveal">
-        <p class="inline-block bg-primary-bright font-bold px-5 py-1 rounded-full mb-6">11 月 28 日　里長選舉</p>
-        <h2 class="font-serif font-black text-4xl md:text-6xl leading-tight mb-6">拜託！拜託！<br>懇請鄉親再賜一票</h2>
-        <p class="text-lg md:text-xl text-white/85 mb-10">二十年的經驗是瑞明的底氣，鄉親的支持是瑞明的力量。<br class="hidden md:inline">請繼續牽成瑞明，讓上天里越來越好！</p>
-        <div class="grid sm:grid-cols-2 gap-4 text-left">
-          <a href="tel:0931343826" class="flex items-center gap-4 min-h-12 rounded-2xl bg-primary-bright p-6 hover:bg-primary transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-foreground focus-visible:ring-white">
-            <svg class="w-8 h-8 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <div><p class="text-sm text-white/85">服務專線（點一下直接撥打）</p><p class="font-bold text-2xl tracking-wider">0931-343-826</p></div>
-          </a>
-          <div class="flex items-center gap-4 rounded-2xl border-2 border-white/30 p-6">
-            <svg class="w-8 h-8 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div><p class="text-sm text-white/85">服務處地址</p><p class="font-bold text-lg">新北市瑞芳區上天里粗坑口路 46 號</p></div>
-          </div>
+    <!-- 聯絡 -->
+    <section id="contact" class="bg-band text-onband py-16 md:py-24 scroll-mt-16">
+      <div class="reveal max-w-6xl mx-auto px-4 grid md:grid-cols-12 gap-10 items-end">
+        <div class="md:col-span-7">
+          <h2 class="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-5">厝邊有困難，<br>喊一聲，瑞明就到</h2>
+          <p class="text-lg md:text-xl text-onband/85 max-w-md">二十年的經驗是瑞明的底氣，鄉親的信任是瑞明的動力。有任何需要協助的地方，歡迎隨時聯絡。</p>
+        </div>
+        <div class="md:col-span-5">
+          <a href="tel:0931343826" class="inline-flex items-center min-h-12 px-7 rounded-lg bg-onband text-band font-bold text-lg whitespace-nowrap hover:bg-surface active:translate-y-px transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-band focus-visible:ring-onband">撥打服務專線</a>
+          <dl class="mt-8 space-y-5">
+            <div>
+              <dt class="text-sm text-onband/75">電話</dt>
+              <dd class="text-2xl font-bold tracking-wide tabular-nums">0931-343-826</dd>
+            </div>
+            <div>
+              <dt class="text-sm text-onband/75">服務處地址</dt>
+              <dd class="text-lg font-bold">新北市瑞芳區上天里粗坑口路 46 號</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-foreground border-t border-white/10 text-white/70 text-sm text-center py-6 px-4">
-    上天里里長候選人 林瑞明　敬邀
+  <footer class="border-t border-line text-soft text-sm py-6 px-4">
+    <div class="max-w-6xl mx-auto">上天里里長 林瑞明</div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script>
-    // 輕量捲動淡入；使用者設定減少動態時完全不動
-    if (window.gsap && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // 動態只做兩件事：進場時依序淡入（引導視線由上往下），捲動到區塊時淡入一次。偏好減少動態的人完全不動。
+    (function () {
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!window.gsap || reduced) return;
       gsap.registerPlugin(ScrollTrigger);
-      gsap.utils.toArray('.reveal').forEach((el) => {
+      gsap.from('.hero-in', { opacity: 0, y: 16, duration: 0.6, stagger: 0.09, ease: 'power2.out' });
+      gsap.utils.toArray('.reveal').forEach(function (el) {
         gsap.from(el, {
-          opacity: 0, y: 12, duration: 0.35, ease: 'power1.out',
-          scrollTrigger: { trigger: el, start: 'top 90%', toggleActions: 'play none none reverse' },
+          opacity: 0, y: 14, duration: 0.5, ease: 'power2.out',
+          scrollTrigger: { trigger: el, start: 'top 90%', once: true },
         });
       });
-    }
+    })();
+  </script>
+
+  <script>
+    // 導覽列：標示目前所在區塊
+    (function () {
+      var links = Array.prototype.slice.call(document.querySelectorAll('.navlink'));
+      if (!('IntersectionObserver' in window) || !links.length) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          links.forEach(function (l) {
+            if (l.hash === '#' + e.target.id) l.setAttribute('aria-current', 'true');
+            else l.removeAttribute('aria-current');
+          });
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      links.forEach(function (l) {
+        var t = document.querySelector(l.hash);
+        if (t) io.observe(t);
+      });
+    })();
+  </script>
+
+  <script>
+    // 現場紀錄輪播：交叉淡入並緩慢推近，用來帶出「這是同一件事的不同畫面」。
+    // 減少動態偏好時不自動播放、不做動畫。滑鼠停留、鍵盤聚焦、按暫停都會停止自動播放。
+    (function () {
+      var CATS = [
+        { key: 'disaster', label: '災害處理', count: 6, caption: '颱風豪雨過後，一處一處追到底' },
+        { key: 'bridge',   label: '瑞芳橋改建', count: 5, caption: '橋樑改建完工，鄉親出入更平安' },
+        { key: 'stream',   label: '野溪整治', count: 7, caption: '野溪清疏整治，讓雨水順暢排出' },
+      ];
+      var INTERVAL = 5000;
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var useGsap = !!window.gsap && !reduced;
+
+      function $(id) { return document.getElementById(id); }
+      var tabsEl = $('gallery-tabs'), slidesEl = $('slides'), dotsEl = $('dots');
+      var capEl = $('slide-caption'), carousel = $('carousel'), playBtn = $('toggle-play');
+      if (!tabsEl || !slidesEl) return;
+
+      var cat = -1, idx = 0, timer = null, playing = !reduced, hovering = false, slides = [];
+
+      function buildTabs() {
+        CATS.forEach(function (c, i) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.id = 'tab-' + c.key;
+          b.setAttribute('role', 'tab');
+          b.textContent = c.label;
+          b.className = 'min-h-11 px-5 rounded-lg font-bold text-lg border-2 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-tint focus-visible:ring-accent';
+          b.addEventListener('click', function () { selectCat(i, true); });
+          b.addEventListener('keydown', function (e) {
+            if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+            var n = (i + (e.key === 'ArrowRight' ? 1 : CATS.length - 1)) % CATS.length;
+            selectCat(n, true);
+            $('tab-' + CATS[n].key).focus();
+          });
+          tabsEl.appendChild(b);
+        });
+      }
+
+      function paintTabs() {
+        CATS.forEach(function (c, i) {
+          var b = $('tab-' + c.key), on = i === cat;
+          b.setAttribute('aria-selected', String(on));
+          b.tabIndex = on ? 0 : -1;
+          var add = on ? ['bg-accent', 'text-onaccent', 'border-accent'] : ['bg-transparent', 'text-ink', 'border-line', 'hover:border-accent'];
+          var rm = on ? ['bg-transparent', 'text-ink', 'border-line', 'hover:border-accent'] : ['bg-accent', 'text-onaccent', 'border-accent'];
+          rm.forEach(function (k) { b.classList.remove(k); });
+          add.forEach(function (k) { b.classList.add(k); });
+        });
+      }
+
+      function buildSlides() {
+        var c = CATS[cat];
+        slidesEl.innerHTML = '';
+        slides = [];
+        for (var i = 1; i <= c.count; i++) {
+          var img = document.createElement('img');
+          img.src = 'images/' + c.key + '-' + i + '.jpg';
+          img.alt = c.label + '現場照片，第 ' + i + ' 張，共 ' + c.count + ' 張';
+          img.width = 1600; img.height = 900;
+          img.decoding = 'async';
+          if (i > 1) img.loading = 'lazy';
+          img.className = 'absolute inset-0 w-full h-full object-cover';
+          img.setAttribute('aria-hidden', 'true');
+          img.style.opacity = 0;
+          slidesEl.appendChild(img);
+          slides.push(img);
+        }
+        dotsEl.innerHTML = '';
+        slides.forEach(function (_, i) {
+          var d = document.createElement('button');
+          d.type = 'button';
+          d.setAttribute('aria-label', '第 ' + (i + 1) + ' 張');
+          d.className = 'group w-8 h-11 flex items-center justify-center focus-visible:outline-none';
+          d.innerHTML = '<span class="dot block w-6 h-1.5 rounded-sm bg-line transition-colors duration-300 group-hover:bg-soft group-focus-visible:ring-2 group-focus-visible:ring-accent group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-tint"></span>';
+          d.addEventListener('click', function () { go(i, true); });
+          dotsEl.appendChild(d);
+        });
+      }
+
+      function paintDots() {
+        Array.prototype.forEach.call(dotsEl.children, function (d, i) {
+          var dot = d.firstElementChild, on = i === idx;
+          dot.classList.toggle('bg-accent', on);
+          dot.classList.toggle('bg-line', !on);
+          if (on) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
+        });
+      }
+
+      function show(i, instant) {
+        var next = slides[i];
+        slides.forEach(function (s, k) {
+          if (k === i) return;
+          s.setAttribute('aria-hidden', 'true');
+          s.style.zIndex = 0;
+          if (useGsap && !instant) gsap.to(s, { opacity: 0, duration: 0.9, ease: 'power1.inOut', overwrite: true });
+          else s.style.opacity = 0;
+        });
+        next.removeAttribute('aria-hidden');
+        next.style.zIndex = 1;
+        if (useGsap && !instant) {
+          gsap.fromTo(next, { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.9, ease: 'power1.inOut', overwrite: true });
+          gsap.to(next, { scale: 1.04, duration: INTERVAL / 1000 + 1, ease: 'none', delay: 0.9 });
+        } else {
+          next.style.opacity = 1;
+          next.style.transform = '';
+        }
+        var nn = slides[(i + 1) % slides.length];
+        if (nn && nn.loading === 'lazy') nn.loading = 'eager';
+      }
+
+      function setCaption(animate) {
+        capEl.textContent = CATS[cat].caption;
+        if (useGsap && animate) gsap.fromTo(capEl, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' });
+      }
+
+      function go(i, user) {
+        idx = (i + slides.length) % slides.length;
+        show(idx, false);
+        paintDots();
+        if (user) restart();
+      }
+
+      function selectCat(i, animate) {
+        if (i === cat) return;
+        cat = i;
+        paintTabs();
+        buildSlides();
+        idx = 0;
+        show(0, true);
+        paintDots();
+        setCaption(animate);
+        if (useGsap && animate) gsap.fromTo(slidesEl, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' });
+        restart();
+      }
+
+      function stop() { clearInterval(timer); timer = null; }
+      function restart() {
+        stop();
+        if (playing && !hovering && !document.hidden) timer = setInterval(function () { go(idx + 1, false); }, INTERVAL);
+      }
+
+      function paintPlay() {
+        $('play-label').textContent = playing ? '暫停' : '播放';
+        playBtn.setAttribute('aria-pressed', String(!playing));
+        playBtn.setAttribute('aria-label', playing ? '暫停自動播放' : '開始自動播放');
+      }
+
+      $('prev').addEventListener('click', function () { go(idx - 1, true); });
+      $('next').addEventListener('click', function () { go(idx + 1, true); });
+      playBtn.addEventListener('click', function () { playing = !playing; paintPlay(); restart(); });
+      carousel.addEventListener('mouseenter', function () { hovering = true; stop(); });
+      carousel.addEventListener('mouseleave', function () { hovering = false; restart(); });
+      carousel.addEventListener('focusin', function () { hovering = true; stop(); });
+      carousel.addEventListener('focusout', function () { hovering = false; restart(); });
+      carousel.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') { go(idx - 1, true); e.preventDefault(); }
+        if (e.key === 'ArrowRight') { go(idx + 1, true); e.preventDefault(); }
+      });
+      document.addEventListener('visibilitychange', restart);
+
+      // 手機左右滑動
+      var sx = null;
+      slidesEl.addEventListener('pointerdown', function (e) { sx = e.clientX; });
+      slidesEl.addEventListener('pointerup', function (e) {
+        if (sx === null) return;
+        var dx = e.clientX - sx; sx = null;
+        if (Math.abs(dx) > 50) go(idx + (dx < 0 ? 1 : -1), true);
+      });
+      slidesEl.addEventListener('pointercancel', function () { sx = null; });
+
+      buildTabs();
+      selectCat(0, false);
+      paintPlay();
+    })();
   </script>
 </body>
 </html>
