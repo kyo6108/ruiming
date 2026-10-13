@@ -10,13 +10,13 @@
   <meta property="og:description" content="二十年一步一腳印，務實誠懇為鄉親服務。">
   <meta property="og:locale" content="zh_TW">
   <meta name="color-scheme" content="light dark">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231F5E3B'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='700' text-anchor='middle' fill='white' font-family='sans-serif'%3E瑞%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23C2410C'/%3E%3Ctext x='32' y='46' font-size='40' font-weight='700' text-anchor='middle' fill='white' font-family='sans-serif'%3E瑞%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@400;500;700;900&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // 單一強調色（深綠），其餘皆為帶綠調的中性色。顏色以 CSS 變數定義，自動切換淺色/深色。
+    // 單一強調色（溫暖赤陶橘紅），其餘皆為帶暖調的中性色，營造親民、在地、誠懇的服務感。顏色以 CSS 變數定義，自動切換淺色/深色。
     tailwind.config = {
       theme: {
         extend: {
@@ -43,32 +43,32 @@
   </script>
   <style>
     :root {
-      --c-page: 245 245 242;
+      --c-page: 253 246 237;
       --c-surface: 255 255 255;
-      --c-ink: 27 31 28;
-      --c-soft: 75 82 77;
-      --c-line: 218 220 214;
-      --c-accent: 31 94 59;
-      --c-deep: 22 74 45;
-      --c-tint: 230 238 232;
-      --c-band: 22 74 45;
-      --c-onband: 245 247 244;
+      --c-ink: 41 30 23;
+      --c-soft: 120 100 90;
+      --c-line: 232 214 194;
+      --c-accent: 194 65 12;
+      --c-deep: 154 52 18;
+      --c-tint: 255 237 213;
+      --c-band: 124 45 18;
+      --c-onband: 255 255 255;
       --c-onaccent: 255 255 255;
       color-scheme: light dark;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --c-page: 20 24 21;
-        --c-surface: 29 35 31;
-        --c-ink: 236 238 234;
-        --c-soft: 178 186 180;
-        --c-line: 52 60 55;
-        --c-accent: 124 196 150;
-        --c-deep: 150 212 174;
-        --c-tint: 31 44 36;
-        --c-band: 30 50 39;
-        --c-onband: 236 238 234;
-        --c-onaccent: 14 28 19;
+        --c-page: 28 20 15;
+        --c-surface: 43 32 24;
+        --c-ink: 243 230 216;
+        --c-soft: 194 175 160;
+        --c-line: 74 58 44;
+        --c-accent: 251 146 60;
+        --c-deep: 253 186 116;
+        --c-tint: 47 34 23;
+        --c-band: 124 45 18;
+        --c-onband: 255 255 255;
+        --c-onaccent: 67 20 7;
       }
     }
     html { scroll-behavior: smooth; }
@@ -116,11 +116,11 @@
         </div>
       </div>
 
-      <!-- 大頭照：白底照片以 multiply 融入淺綠色底，沒有檔案時改顯示姓名 -->
+      <!-- 大頭照：白底照片以 multiply 融入暖色底，沒有檔案時改顯示姓名 -->
       <div class="hero-in md:col-span-5">
-        <div class="relative aspect-[3/4] max-w-sm mx-auto md:max-w-none rounded-lg overflow-hidden" style="background:#DCE8DF">
+        <div class="relative aspect-[3/4] max-w-sm mx-auto md:max-w-none rounded-lg overflow-hidden" style="background:#F5E3D3">
           <div class="hidden absolute inset-0 items-center justify-center">
-            <span class="font-black text-6xl text-[#1F5E3B]/60" style="writing-mode:vertical-rl;letter-spacing:.2em">林瑞明</span>
+            <span class="font-black text-6xl text-[#C2410C]/60" style="writing-mode:vertical-rl;letter-spacing:.2em">林瑞明</span>
           </div>
           <img src="images/portrait.jpg" alt="上天里里長林瑞明" width="900" height="1237" fetchpriority="high"
                class="relative w-full h-full object-cover object-top mix-blend-multiply"
@@ -182,25 +182,41 @@
     <section id="gallery" class="bg-tint py-16 md:py-24 scroll-mt-16" aria-labelledby="gallery-title">
       <div class="max-w-6xl mx-auto px-4">
         <p class="reveal text-soft font-medium tracking-widest mb-3">現場紀錄</p>
-        <h2 id="gallery-title" class="reveal text-3xl md:text-4xl font-black tracking-tight mb-8">做過的事，照片為證</h2>
+        <h2 id="gallery-title" class="reveal text-3xl md:text-4xl font-black tracking-tight mb-2">做過的事，照片為證</h2>
+        <p class="reveal text-soft mb-8">六件代誌，一項一項做給鄉親看。點一張卡片，看現場照片。</p>
 
-        <div id="gallery-tabs" role="tablist" aria-label="政績類別" class="flex flex-wrap gap-3 mb-6"></div>
+        <div id="gallery-cards" class="reveal grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-5"></div>
 
-        <div id="carousel" role="region" aria-roledescription="輪播" aria-label="政績照片輪播" tabindex="0"
-             class="relative rounded-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-offset-4 focus-visible:ring-offset-tint focus-visible:ring-accent">
-          <div id="slides" class="relative aspect-[4/3] sm:aspect-video overflow-hidden rounded-lg bg-surface touch-pan-y"></div>
-
-          <button id="prev" type="button" aria-label="上一張" class="absolute left-3 top-1/2 -translate-y-1/2 w-12 h-12 rounded-lg bg-surface/90 text-ink text-2xl leading-none flex items-center justify-center hover:bg-surface active:scale-95 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">←</button>
-          <button id="next" type="button" aria-label="下一張" class="absolute right-3 top-1/2 -translate-y-1/2 w-12 h-12 rounded-lg bg-surface/90 text-ink text-2xl leading-none flex items-center justify-center hover:bg-surface active:scale-95 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">→</button>
+        <div class="mt-7">
+          <button id="view-all" type="button" class="inline-flex items-center gap-2 font-bold text-accent underline decoration-2 underline-offset-4 hover:text-deep transition-colors duration-200 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+            查看全部現場照片（31 張）
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
         </div>
+      </div>
 
-        <div class="mt-5 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
-          <p id="slide-caption" class="font-bold text-lg md:text-xl"></p>
-          <div class="flex items-center gap-4">
-            <div id="dots" class="flex" role="group" aria-label="選擇照片"></div>
-            <button id="toggle-play" type="button" aria-pressed="false" class="min-h-11 px-4 rounded-lg border-2 border-line font-bold text-ink hover:border-accent hover:text-accent transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"><span id="play-label">暫停</span></button>
+      <!-- 燈箱：點卡片或「查看全部」後開啟，顯示該類別（或全部）的現場照片 -->
+      <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true" aria-label="現場照片瀏覽" style="background:rgba(20,14,10,.95)">
+        <button id="lb-close" type="button" aria-label="關閉照片瀏覽" class="absolute top-3 right-3 sm:top-5 sm:right-5 w-11 h-11 rounded-full bg-surface/90 text-ink flex items-center justify-center hover:bg-surface active:scale-95 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+
+        <figure class="max-w-4xl w-full touch-pan-y">
+          <div id="lb-frame" class="relative aspect-[4/3] sm:aspect-video">
+            <img id="lb-img" src="" alt="" class="absolute inset-0 w-full h-full object-contain" decoding="async">
+
+            <button id="lb-prev" type="button" aria-label="上一張" class="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-surface/90 text-ink flex items-center justify-center hover:bg-surface active:scale-95 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button id="lb-next" type="button" aria-label="下一張" class="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-surface/90 text-ink flex items-center justify-center hover:bg-surface active:scale-95 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
           </div>
-        </div>
+          <figcaption class="mt-4 text-center text-white">
+            <span id="lb-label" class="font-bold text-lg"></span>
+            <span id="lb-counter" class="text-white/70 ml-2 tabular-nums" aria-live="polite"></span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -329,179 +345,131 @@
   </script>
 
   <script>
-    // 現場紀錄輪播：交叉淡入並緩慢推近，用來帶出「這是同一件事的不同畫面」。
-    // 減少動態偏好時不自動播放、不做動畫。滑鼠停留、鍵盤聚焦、按暫停都會停止自動播放。
+    // 現場紀錄：六張成就卡片，點開後用燈箱瀏覽該類別照片；「查看全部」可跨類別連續瀏覽。
+    // 不自動播放，照片只在燈箱開啟當下才載入。減少動態偏好時不做淡入動畫。
     (function () {
       var CATS = [
         { key: 'disaster', label: '災害處理', count: 6, caption: '颱風豪雨過後，一處一處追到底' },
         { key: 'bridge',   label: '瑞芳橋改建', count: 5, caption: '橋樑改建完工，鄉親出入更平安' },
         { key: 'stream',   label: '野溪整治', count: 7, caption: '野溪清疏整治，讓雨水順暢排出' },
+        { key: 'alley',    label: '巷弄整修', count: 3, caption: '巷弄重新鋪整，窄巷也能走得安穩' },
+        { key: 'trail',    label: '河濱步道', count: 7, caption: '河堤步道整治完工，沿溪散步更自在' },
+        { key: 'sanitize', label: '環境消毒', count: 3, caption: '定期環境消毒，蚊蟲病媒防治不漏接' },
       ];
-      var INTERVAL = 5000;
-      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var useGsap = !!window.gsap && !reduced;
 
       function $(id) { return document.getElementById(id); }
-      var tabsEl = $('gallery-tabs'), slidesEl = $('slides'), dotsEl = $('dots');
-      var capEl = $('slide-caption'), carousel = $('carousel'), playBtn = $('toggle-play');
-      if (!tabsEl || !slidesEl) return;
+      var cardsEl = $('gallery-cards'), viewAllBtn = $('view-all');
+      var lb = $('lightbox'), lbImg = $('lb-img'), lbLabel = $('lb-label'), lbCounter = $('lb-counter'), lbFrame = $('lb-frame');
+      var lbClose = $('lb-close'), lbPrev = $('lb-prev'), lbNext = $('lb-next');
+      if (!cardsEl || !lb) return;
 
-      var cat = -1, idx = 0, timer = null, playing = !reduced, hovering = false, slides = [];
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      function buildTabs() {
-        CATS.forEach(function (c, i) {
-          var b = document.createElement('button');
-          b.type = 'button';
-          b.id = 'tab-' + c.key;
-          b.setAttribute('role', 'tab');
-          b.textContent = c.label;
-          b.className = 'min-h-11 px-5 rounded-lg font-bold text-lg border-2 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-tint focus-visible:ring-accent';
-          b.addEventListener('click', function () { selectCat(i, true); });
-          b.addEventListener('keydown', function (e) {
-            if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-            var n = (i + (e.key === 'ArrowRight' ? 1 : CATS.length - 1)) % CATS.length;
-            selectCat(n, true);
-            $('tab-' + CATS[n].key).focus();
-          });
-          tabsEl.appendChild(b);
-        });
-      }
-
-      function paintTabs() {
-        CATS.forEach(function (c, i) {
-          var b = $('tab-' + c.key), on = i === cat;
-          b.setAttribute('aria-selected', String(on));
-          b.tabIndex = on ? 0 : -1;
-          var add = on ? ['bg-accent', 'text-onaccent', 'border-accent'] : ['bg-transparent', 'text-ink', 'border-line', 'hover:border-accent'];
-          var rm = on ? ['bg-transparent', 'text-ink', 'border-line', 'hover:border-accent'] : ['bg-accent', 'text-onaccent', 'border-accent'];
-          rm.forEach(function (k) { b.classList.remove(k); });
-          add.forEach(function (k) { b.classList.add(k); });
-        });
-      }
-
-      function buildSlides() {
-        var c = CATS[cat];
-        slidesEl.innerHTML = '';
-        slides = [];
-        for (var i = 1; i <= c.count; i++) {
-          var img = document.createElement('img');
-          img.src = 'images/' + c.key + '-' + i + '.jpg';
-          img.alt = c.label + '現場照片，第 ' + i + ' 張，共 ' + c.count + ' 張';
-          img.width = 1600; img.height = 900;
-          img.decoding = 'async';
-          if (i > 1) img.loading = 'lazy';
-          img.className = 'absolute inset-0 w-full h-full object-cover';
-          img.setAttribute('aria-hidden', 'true');
-          img.style.opacity = 0;
-          slidesEl.appendChild(img);
-          slides.push(img);
-        }
-        dotsEl.innerHTML = '';
-        slides.forEach(function (_, i) {
-          var d = document.createElement('button');
-          d.type = 'button';
-          d.setAttribute('aria-label', '第 ' + (i + 1) + ' 張');
-          d.className = 'group w-8 h-11 flex items-center justify-center focus-visible:outline-none';
-          d.innerHTML = '<span class="dot block w-6 h-1.5 rounded-sm bg-line transition-colors duration-300 group-hover:bg-soft group-focus-visible:ring-2 group-focus-visible:ring-accent group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-tint"></span>';
-          d.addEventListener('click', function () { go(i, true); });
-          dotsEl.appendChild(d);
-        });
-      }
-
-      function paintDots() {
-        Array.prototype.forEach.call(dotsEl.children, function (d, i) {
-          var dot = d.firstElementChild, on = i === idx;
-          dot.classList.toggle('bg-accent', on);
-          dot.classList.toggle('bg-line', !on);
-          if (on) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current');
-        });
-      }
-
-      function show(i, instant) {
-        var next = slides[i];
-        slides.forEach(function (s, k) {
-          if (k === i) return;
-          s.setAttribute('aria-hidden', 'true');
-          s.style.zIndex = 0;
-          if (useGsap && !instant) gsap.to(s, { opacity: 0, duration: 0.9, ease: 'power1.inOut', overwrite: true });
-          else s.style.opacity = 0;
-        });
-        next.removeAttribute('aria-hidden');
-        next.style.zIndex = 1;
-        if (useGsap && !instant) {
-          gsap.fromTo(next, { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.9, ease: 'power1.inOut', overwrite: true });
-          gsap.to(next, { scale: 1.04, duration: INTERVAL / 1000 + 1, ease: 'none', delay: 0.9 });
-        } else {
-          next.style.opacity = 1;
-          next.style.transform = '';
-        }
-        var nn = slides[(i + 1) % slides.length];
-        if (nn && nn.loading === 'lazy') nn.loading = 'eager';
-      }
-
-      function setCaption(animate) {
-        capEl.textContent = CATS[cat].caption;
-        if (useGsap && animate) gsap.fromTo(capEl, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' });
-      }
-
-      function go(i, user) {
-        idx = (i + slides.length) % slides.length;
-        show(idx, false);
-        paintDots();
-        if (user) restart();
-      }
-
-      function selectCat(i, animate) {
-        if (i === cat) return;
-        cat = i;
-        paintTabs();
-        buildSlides();
-        idx = 0;
-        show(0, true);
-        paintDots();
-        setCaption(animate);
-        if (useGsap && animate) gsap.fromTo(slidesEl, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' });
-        restart();
-      }
-
-      function stop() { clearInterval(timer); timer = null; }
-      function restart() {
-        stop();
-        if (playing && !hovering && !document.hidden) timer = setInterval(function () { go(idx + 1, false); }, INTERVAL);
-      }
-
-      function paintPlay() {
-        $('play-label').textContent = playing ? '暫停' : '播放';
-        playBtn.setAttribute('aria-pressed', String(!playing));
-        playBtn.setAttribute('aria-label', playing ? '暫停自動播放' : '開始自動播放');
-      }
-
-      $('prev').addEventListener('click', function () { go(idx - 1, true); });
-      $('next').addEventListener('click', function () { go(idx + 1, true); });
-      playBtn.addEventListener('click', function () { playing = !playing; paintPlay(); restart(); });
-      carousel.addEventListener('mouseenter', function () { hovering = true; stop(); });
-      carousel.addEventListener('mouseleave', function () { hovering = false; restart(); });
-      carousel.addEventListener('focusin', function () { hovering = true; stop(); });
-      carousel.addEventListener('focusout', function () { hovering = false; restart(); });
-      carousel.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft') { go(idx - 1, true); e.preventDefault(); }
-        if (e.key === 'ArrowRight') { go(idx + 1, true); e.preventDefault(); }
+      // 攤平成單一清單，讓「查看全部」可以跨類別連續上一張／下一張
+      var ALL = [];
+      CATS.forEach(function (c) {
+        for (var i = 1; i <= c.count; i++) ALL.push({ cat: c, n: i });
       });
-      document.addEventListener('visibilitychange', restart);
+
+      var list = ALL, pos = 0, lastFocused = null;
+
+      function srcOf(item) { return 'images/' + item.cat.key + '-' + item.n + '.jpg'; }
+      function altOf(item) { return item.cat.label + '現場照片，第 ' + item.n + ' 張，共 ' + item.cat.count + ' 張'; }
+
+      function render() {
+        var item = list[pos];
+        lbImg.src = srcOf(item);
+        lbImg.alt = altOf(item);
+        lbLabel.textContent = item.cat.label;
+        lbCounter.textContent = (pos + 1) + ' / ' + list.length;
+        if (!reduced) {
+          lbFrame.style.opacity = 0;
+          requestAnimationFrame(function () {
+            lbFrame.style.transition = 'opacity .2s ease';
+            lbFrame.style.opacity = 1;
+          });
+        }
+      }
+
+      function openLightbox(scopedList, startIndex, trigger) {
+        list = scopedList;
+        pos = startIndex;
+        lastFocused = trigger || document.activeElement;
+        render();
+        lb.classList.remove('hidden');
+        lb.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        lbClose.focus();
+        document.addEventListener('keydown', onKeydown);
+      }
+
+      function closeLightbox() {
+        lb.classList.add('hidden');
+        lb.classList.remove('flex');
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', onKeydown);
+        if (lastFocused && lastFocused.focus) lastFocused.focus();
+      }
+
+      function step(delta) {
+        pos = (pos + delta + list.length) % list.length;
+        render();
+      }
+
+      function onKeydown(e) {
+        if (e.key === 'Escape') { closeLightbox(); return; }
+        if (e.key === 'ArrowLeft') { step(-1); return; }
+        if (e.key === 'ArrowRight') { step(1); return; }
+        if (e.key === 'Tab') {
+          var focusable = [lbClose, lbPrev, lbNext];
+          var i = focusable.indexOf(document.activeElement);
+          e.preventDefault();
+          var n = (i + (e.shiftKey ? -1 : 1) + focusable.length) % focusable.length;
+          focusable[n].focus();
+        }
+      }
+
+      lbClose.addEventListener('click', closeLightbox);
+      lbPrev.addEventListener('click', function () { step(-1); });
+      lbNext.addEventListener('click', function () { step(1); });
+      lb.addEventListener('click', function (e) { if (e.target === lb) closeLightbox(); });
 
       // 手機左右滑動
       var sx = null;
-      slidesEl.addEventListener('pointerdown', function (e) { sx = e.clientX; });
-      slidesEl.addEventListener('pointerup', function (e) {
+      lbFrame.addEventListener('pointerdown', function (e) { sx = e.clientX; });
+      lbFrame.addEventListener('pointerup', function (e) {
         if (sx === null) return;
         var dx = e.clientX - sx; sx = null;
-        if (Math.abs(dx) > 50) go(idx + (dx < 0 ? 1 : -1), true);
+        if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
       });
-      slidesEl.addEventListener('pointercancel', function () { sx = null; });
+      lbFrame.addEventListener('pointercancel', function () { sx = null; });
 
-      buildTabs();
-      selectCat(0, false);
-      paintPlay();
+      function buildCards() {
+        CATS.forEach(function (c) {
+          var startIndex = -1;
+          ALL.forEach(function (item, i) { if (item.cat === c && startIndex === -1) startIndex = i; });
+          var scoped = ALL.slice(startIndex, startIndex + c.count);
+
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.setAttribute('aria-haspopup', 'dialog');
+          b.setAttribute('aria-label', c.label + '，現場照片 ' + c.count + ' 張，點開查看');
+          b.className = 'group relative aspect-[4/3] rounded-lg overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-offset-2 focus-visible:ring-offset-tint focus-visible:ring-accent';
+          b.innerHTML =
+            '<img src="images/cover-' + c.key + '.jpg" alt="" width="800" height="600" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">' +
+            '<span class="absolute inset-0 bg-gradient-to-t from-band/90 via-band/10 to-transparent" aria-hidden="true"></span>' +
+            '<span class="absolute inset-x-0 bottom-0 p-3 sm:p-4 text-left" aria-hidden="true">' +
+              '<span class="block font-bold text-onband text-base sm:text-lg">' + c.label + '</span>' +
+              '<span class="block text-onband/80 text-sm">現場照片 ' + c.count + ' 張</span>' +
+            '</span>';
+          b.addEventListener('click', function () { openLightbox(scoped, 0, b); });
+          cardsEl.appendChild(b);
+        });
+      }
+
+      viewAllBtn.addEventListener('click', function () { openLightbox(ALL, 0, viewAllBtn); });
+
+      buildCards();
     })();
   </script>
 </body>
